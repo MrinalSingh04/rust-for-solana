@@ -1,4 +1,4 @@
-# Rust for Solana – Dapp Mentors
+# Rust for Solana
 
 This repository contains my Rust learning progress, focused on Rust for Solana and blockchain development.
 
