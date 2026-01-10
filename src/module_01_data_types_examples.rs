@@ -55,7 +55,26 @@ pub fn arithmetic_operations() {
     let gas_price: f64 = 0.00000002;
     let gas_used: f64 = 21000.0;
     println!("Gas Price = {}, Gas Used = {}", gas_price, gas_used);
-    println!("Total Gas Fee: {:.8}", gas_price * gas_used);// :.8 for precision 
+    println!("Total Gas Fee: {:.8}", gas_price * gas_used); // :.8 for precision 
+}
+
+pub fn logical_operations() {
+    let is_staking: bool = true;
+    let has_sufficient_balance: bool = false;
+
+    println!(
+        "Is staking = {}, Has Sufficient Balance = {}",
+        is_staking, has_sufficient_balance
+    );
+    println!(
+        "Can perform staking = {}",
+        is_staking && has_sufficient_balance
+    );
+    println!(
+        "Can either perform staking or withdraw = {}",
+        is_staking || has_sufficient_balance
+    );
+    println!("Negative staking status: !is_staking = {}", !is_staking);
 }
 
 pub fn demo() {
@@ -64,4 +83,7 @@ pub fn demo() {
 
     println!("\n");
     arithmetic_operations();
+
+    println!("\n");
+    logical_operations();
 }
