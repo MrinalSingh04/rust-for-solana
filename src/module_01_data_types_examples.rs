@@ -77,6 +77,54 @@ pub fn logical_operations() {
     println!("Negative staking status: !is_staking = {}", !is_staking);
 }
 
+pub fn variable_shadowing_and_conversion() {
+    let account_balance: i32 = 500;
+    println!("Initial Account Balnace: {}", account_balance);
+
+    let account_balance: i32 = account_balance + 100;
+    println!("Updated Account Balance after deposit: {}", account_balance);
+
+    let gas_fee: f64 = 0.00021;
+    let gas_fee_int: i32 = gas_fee as i32; // Explicit conversion from f64 to i32
+    println!(
+        "Gas Fee as f64: {}, Converted Gas Fee as i32: {}",
+        gas_fee, gas_fee_int
+    );
+
+    let block_height: i32 = 128550;
+    let block_height_str: String = block_height.to_string(); // Convert i32 to String
+    println!(
+        "Block Height as i32: {}, Converted Block Height as String: {}",
+        block_height, block_height_str
+    );
+}
+
+pub fn mutability_example() {
+    let token: i32 = 1_000_000;
+
+    let mut user_balance: i32 = 500;
+    println!("Initial User Balance: {}", user_balance);
+
+    user_balance -= 50;
+    println!("User Balance after spending 50 tokens: {}", user_balance);
+}
+
+pub fn tuple_destructuring_example() {
+    let transaction_info: (&str, i32, f64) = ("Transfer", 200, 0.002);
+
+    let (tx_type, tx_amount, tx_fee) = transaction_info;
+
+    println!(
+        "Transaction Type: {}, Amount: {}, Fee: {}",
+        tx_type, tx_amount, tx_fee
+    );
+
+    println!(
+        "Transaction type: {}, Amount: {}, Fee: {}",
+        transaction_info.0, transaction_info.1, transaction_info.2
+    );
+}
+
 pub fn demo() {
     println!("\n");
     primitive_data_types();
@@ -86,4 +134,13 @@ pub fn demo() {
 
     println!("\n");
     logical_operations();
+
+    println!("\n");
+    variable_shadowing_and_conversion();
+
+    println!("\n");
+    mutability_example();
+
+    println!("\n");
+    tuple_destructuring_example();
 }
