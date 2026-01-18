@@ -14,7 +14,7 @@ This repository contains my Rust learning progress, focused on Rust for Solana a
 - Arithmetic Operations  
 - Logical Operations  
 - Variable Shadowing  
-- Variable Mutability  
+- Variable Mutability   
 
 ### Control Flow
 - Tuple Destructuring  
