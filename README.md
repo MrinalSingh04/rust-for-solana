@@ -9,7 +9,7 @@ This repository contains my Rust learning progress, focused on Rust for Solana a
 - Rust VS Code Extensions  
 - Modularization   
 
-### Basics
+### Basics 
 - Primitive Data Types  
 - Arithmetic Operations  
 - Logical Operations  
