@@ -20,9 +20,27 @@ pub fn multiple_return_example() {
     );
 }
 
+pub fn higher_order_function_example() {
+    fn apply_fee<F>(f: F, gas_limit: i32) -> i32
+    where
+        F: Fn(i32) -> i32,
+    {
+        f(gas_limit)
+    }
 
+    fn calculate_fee(gas_limit: i32) -> i32 {
+        gas_limit * 2
+    }
+
+    let total_fee = apply_fee(calculate_fee, 100);
+    println!(
+        "Total fee calculated using higher-order function: {}",
+        total_fee
+    );
+}
 
 pub fn demo() {
-    basic_function();
-    multiple_return_example();
+    // basic_function();
+    // multiple_return_example();
+    higher_order_function_example();
 }
