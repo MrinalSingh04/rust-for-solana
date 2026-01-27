@@ -39,8 +39,15 @@ pub fn higher_order_function_example() {
     );
 }
 
+pub fn basic_closure_exapmle() {
+    let transfer = |token: i32, fee: i32| -> i32 { token - fee };
+    let final_balance: i32 = transfer(100, 5);
+    println!("Final balance after transfer: {}", final_balance);
+}
+
 pub fn demo() {
     // basic_function();
     // multiple_return_example();
-    higher_order_function_example();
+    // higher_order_function_example();
+    basic_closure_exapmle();
 }
