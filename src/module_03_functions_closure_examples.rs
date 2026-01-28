@@ -46,8 +46,8 @@ pub fn basic_closure_exapmle() {
 }
 
 pub fn demo() {
-    // basic_function();
-    // multiple_return_example();
-    // higher_order_function_example();
+    basic_function();
+    multiple_return_example();
+    higher_order_function_example();
     basic_closure_exapmle();
 }
