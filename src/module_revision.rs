@@ -17,15 +17,29 @@
 // }
 
 //Ownership --> for memory management
+// pub fn ownership_example() {
+//     // let a = 5;
+//     // let b = a; //copy
+//     // println!("a: {}, b: {}", a, b);
 
-pub fn ownership_example() {
-    // let a = 5;
-    // let b = a; //copy
-    // println!("a: {}, b: {}", a, b);
+//     // let str1 = String::from("Hello");
+//     // let str2 = str1; //move
+//     // println!("str1: {}, str2: {}", str1, str2); //str1 is no longer valid
+// }
 
-    // let str1 = String::from("Hello");
-    // let str2 = str1; //move
-    // println!("str1: {}, str2: {}", str1, str2); //str1 is no longer valid
+//Mutable References
+// pub fn mutable_reference_example() {
+//     let mut s1 = String::from("Hello");
+//     let r = &mut s1; //mutable reference
+//     r.push_str(", World!");
+//     println!("s1: {}", s1);
+// }
+
+fn reference_example() {
+    let s1: String = String::from("Hello");
+    let r1 = &s1; //reference
+    let r2 = &s1; //reference
+    println!("s1: {}, r1: {}, r2: {}", s1, r1, r2);
 }
 
 pub fn demo() {
@@ -35,5 +49,9 @@ pub fn demo() {
     // let result = add(15, 25);
     // println!("The sum is {}", result);
 
-    ownership_example();
+    // ownership_example();
+
+    // mutable_reference_example();
+
+    reference_example();
 }
