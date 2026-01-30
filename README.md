@@ -10,7 +10,7 @@ This repository contains my Rust learning progress, focused on Rust for Solana a
 - Modularization    
  
 ### Basics  
-- Primitive Data Types  
+- Primitive Data Types   
 - Arithmetic Operations  
 - Logical Operations  
 - Variable Shadowing  
